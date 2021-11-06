@@ -1,7 +1,7 @@
 # Blog 
 Blog para escola desenvolvido em php.
 
-![Screenshot Projeto](public\uploads\blog.gif)
+![Screenshot Projeto](https://github.com/brunosilvabrn/SchoolBlog/blob/master/public/uploads/blog.gif)
 ## 🚀 Começando
 
 Essas instruções permitirão que você consiga rodar o projeto na sua máquina ou num servidor web.
