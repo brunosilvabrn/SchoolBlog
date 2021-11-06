@@ -1,0 +1,72 @@
+<?php
+
+$url = (isset($_GET['url'])) ? $_GET['url'] : 'home';
+$url = array_filter(explode('/', $url));
+
+if(!isset($url[2])) {
+
+	echo "<script>window.location.href='administrador/slider'</script>";
+
+}
+
+$id = $url[2];
+
+require_once 'app/connection.php';
+
+global $pdo;
+
+$sql = $pdo->prepare("SELECT * FROM slider WHERE id = :id");
+$sql->bindValue(":id", $id);
+$sql->execute();
+
+while($valor = $sql->fetch()){
+	echo '
+		<main>
+			<div class="msg-excluir">
+				<h1>Deseja Realmente Excluir Esse Slider?</h1>
+				<label><span>TITULO:</span> '.$valor['titulo'].'</label>
+				<br>
+				<label><span>TEXTO:</span> '.$valor['texto'].'</label>
+				<div class="btn-excluir">
+					<a class="btn btn-outline-success" href="administrador/excluir-slider/'.$valor['id'].'/deletar" role="button">SIM</a>
+					<a class="btn btn-outline-danger" href="#" role="button">NÃO</a>
+				</div>
+			</div>
+
+			'
+			;
+
+			if(isset($url[3]) && $url[3] == 'deletar' && isset($url[2])) {
+
+				$id = $url[2];
+
+				$sql = $pdo->prepare("DELETE FROM slider WHERE id = :id");
+				$sql->bindValue(":id", $id);
+				$sql->execute();
+
+				if($sql->rowCount() > 0) {
+					echo "<script>window.location.href='administrador/slider'</script>";
+				}else{
+					echo '
+			
+						<div class="container mt-4">
+							<div class="row">
+								<div class="btn btn-danger col-md-6 m-auto">
+									Erro ao deletar!
+								</div>
+							</div>
+						</div>
+						
+					';
+
+				}
+			}
+
+			'
+
+		</main>
+
+	';
+}
+
+?>

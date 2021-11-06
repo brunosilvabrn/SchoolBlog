@@ -1,0 +1,278 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #e3e8e8!important;
+}
+
+main {
+    margin-left: 220px;
+    min-width: 650px;
+    z-index: 10;
+}
+
+
+nav.nav ul {
+    position: absolute;
+    display: block;
+    top: 100px;
+    overflow-y: auto;
+    max-height: calc(100vh - 6em);
+    width: 220px;
+}
+
+
+/* MENU LATERAL */
+
+nav {
+    width: 220px;
+    height: 100vh;
+    position: fixed;
+    background: #F7F7F7;
+    box-shadow: 0px 0px 6px 4px #15151566;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #cccccc;
+}
+
+.nav-item span {
+    margin-left: 10px;
+}
+
+.nav-item {
+    padding: 5px;
+}
+
+.nav-link {
+    font-size: 17px;
+    color: #2f2f2f
+}
+
+.active, 
+.nav-link:hover {
+    background: #24a4ff;
+    border-radius: 3px;
+    box-shadow: 0px 0px 0px #005aff;
+    color: #000!important;
+}
+
+/* DASHBOARD - PAGE*/
+
+.box-card {
+    position: relative;
+    top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #f3f3f3;
+    width: 95%;
+    margin: auto;
+    padding: 10px;
+    /*border: 1px solid #adadad;*/
+    box-shadow: 0px 0px 8px #000000c4;
+    border-radius: 5px;
+
+}
+
+.card-initial {
+    background: white;
+    width: 250px;
+    margin: auto;
+    /*top: 25px;*/
+    margin: 10px;
+    position: relative;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 4px #000000bf;
+}
+
+.card-initial span{
+    margin-right: 10px;
+    font-size: 30px;
+    font-weight: 700;
+
+}
+
+/* POSTAGENS - PAGE*/
+
+.box-postagens {
+    width: 95%;
+    border-radius: 5px;
+    padding: 5px;
+    position: relative;
+    top: 15px;
+    background: white;
+    margin: auto;
+    box-shadow: 0px 0px 6px #0000007a;
+}
+
+.titulo-postagens {
+    text-align: center;
+    color: #525252;
+}
+
+.box-postagens a {
+    width: 75px;
+}
+
+/* MSG EXCLUIR*/
+
+.msg-excluir {
+    width: 600px;
+    border-radius: 5px;
+    padding: 15px;
+    position: relative;
+    top: 20px;
+    background: white;
+    margin: auto;
+    box-shadow: 0px 0px 6px #0000007a;
+}
+
+.msg-excluir h1 {
+    font-size: 30px;
+    margin: 20px 0px 30px;
+}
+
+.btn-excluir {
+    display: table;
+    margin: auto;
+}
+
+.btn-excluir a {
+    width: 140px;
+    margin: 25px;
+}
+
+.msg-excluir span {
+    font-weight: 700;
+    color: #7b7b7b;
+}
+
+.msg-excluir label {
+    font-size: 16px;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+/* ADICIONAR */
+
+.op-adicionar {
+    font-size: 20px;
+    margin: 10px;
+    margin-top: 25px;
+}
+
+.op-adicionar span {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.op-adicionar a {
+    width: 50%;
+}
+
+/* ADICIONAR NOTICIA*/
+
+.box-postagens-noticia {
+    width: 95%;
+    border-radius: 5px;
+    padding: 25px;
+    position: relative;
+    top: 15px;
+    background: white;
+    margin: auto;
+    box-shadow: 0px 0px 6px #0000007a;
+}
+
+.file-img {
+    margin: 10px 0px 16px 0px;
+}
+
+.margin-1 {
+    margin-top: 15px;
+}
+
+
+.btn-1 {
+    width: 150px;
+    margin: auto;
+}
+
+.btn-1 button {
+    width: 150px;
+}
+
+/* CATEGORIAS */
+
+.alert-cat {
+    color: red;
+    margin-top: 15px;
+}
+
+.esp {
+    color: transparent;
+}
+
+/* LOGIN - PAGE*/
+
+.box-login {
+    margin: 120px auto;
+    width: 450px;
+    padding: 15px;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0px 0px 15px;
+}
+
+.box-login h1 {
+    text-align: center;
+    margin: 10px 0px 20px 0px;
+    color: #3a3a3a;
+}
+
+.btn-login {
+    margin-top: 30px;
+}
+
+.btn-login button {
+    display: block;
+    margin: auto;
+    width: 150px;
+}
+
+/* ADICIONAR ADMINISTRADOR*/
+
+.box-login-adm {
+    width: 500px;
+    border-radius: 5px;
+    padding: 15px;
+    position: relative;
+    top: 20px;
+    background: white;
+    margin: auto;
+    box-shadow: 0px 0px 6px #0000007a;
+}
+
+.box-login-adm h1 {
+    text-align: center;
+    margin: 10px 0px 20px 0px;
+    color: #3a3a3a;
+}
+
+/* EDITAR GALERIA - PAGE*/
+
+.excluir-img-galeria {
+    display: flex;
+    margin-top: 24px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+main .card {
+    margin:5px auto;
+    width: 250px;
+}
